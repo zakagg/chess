@@ -1,0 +1,51 @@
+
+1/*  l' architecture  proposez:
+
+
+l'architecture que nous proposons est une architecture client serveur ou cliant communique avec le serveur en utilisant le protocole de comminication
+tcp et on a utilisé le protole de communication udp pour gerer les message coté (serveur -> client). 
+
+2/ *  Discription du protocole:
+
+   
+au tout debut le client choisit in identifiant;
+apres ca il a le choix de  
+1/ ajouter annonce tape  1:client 1 aux serveur et dernier lui de saisir la description+domaine+prix afin de l'ajouter a la liste des annonces ;
+2/ voir  les annonce taper  2 :ce deienier il lui demande si il veux voir toute liste (1)ou selon le domaine en appuyant sur2. 
+3/si il veux quitter taper 3:(le client quitte l'appli)
+4/si il veux envoyer un message taper 4;(le serveur demande aux client si de saisir l iditifiant du recepteur et le message le message envoyer par le 
+client est en mode tcp ,le serveur envois au recepteur le message en mode udp)
+5/si il veux supprimer une annance un message il tape 5(en demmande aux client de saisir la reference pour suprimer l'annonce)
+6/si il veux afficher la liste des message locale il s'appuit 6 (liste de message recus locale)
+7/SI il veux supprimer un messages appuyer sur 7(en demmande au client de saisir la reference pour suprimer le message de la reference saisie)
+8/si il veux afficher les message dans le serveur appuyer sur 8(en premier lieux en affiche la liste des message envoyer 
+                                                                 apres en envoye la liste des message recus.  ).
+
+
+
+
+pour tout debut le client choisit la fonction qu'il veux 
+on demmande l'id.
+
+apres on reste dans une boucle infini:
+1...7
+
+*si il fait le 1 :alors il remplit et envois a trois reprise le contenue de l'annance.(le serveur interacte aussi a trois
+reprise.,chaque fois on le demmande on le demmande a remplir un champs)
+
+*si il fais le 2:alors le serveur le demmande a son tour a si il veux voir tout les annance (1) ou par domaine  precise.le domaine
+et on a le resultat.
+
+*si il fais le 3:il quit l'api.
+
+*si il fait 4 :il envois le msg :en premier lieux on demmande l'id du user pour lui envoyer le msg, on envoye aux serveur l'id
+apres on lui demande le message pour l'envouyer.
+
+*si il fais 5 :on affiche les annance apres il supprimme l'annace qu'il veux.
+
+*si il fais 7: on demmande la referance du message qu'on dois supprimer,le client l'envois aprés on le supprime coté serveur, 
+
+*une option en plus c que on affiche  tout les les message envoyes et recus par le client  .   
+
+
+	  
