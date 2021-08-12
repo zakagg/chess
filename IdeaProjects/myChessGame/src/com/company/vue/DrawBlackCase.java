@@ -4,13 +4,11 @@ import java.awt.*;
 
 public class DrawBlackCase implements DrawComposant {
     int x;
-
+    int y;
     public DrawBlackCase(int x,int y) {
         this.x = x;
         this.y = y;
     }
-
-    int y;
 
     public int getX() {
         return x;

@@ -26,6 +26,25 @@ import java.util.LinkedList;
              drawComposants) {
             drawComposant.draw(g);
         }
+    }
+    public LinkedList<DrawComposant> build(){
 
+        boolean is_black=true;
+        DrawComposant drawCase;
+        for (int i=0;i<8;i++)
+        {
+            for (int j=0;j<8;j++)
+            {  if(is_black) {
+                    drawCase = new DrawBlackCase(i, j);
+            }
+            else {
+                    drawCase = new DrawWhiteCase(i, j);
+            }
+            this.drawComposants.add(drawCase);
+            is_black=!is_black;
+            }
+            is_black=!is_black;
+        }
+        return this.drawComposants;
     }
 }
